@@ -1,14 +1,14 @@
 <?php
 // ROUTER
 
-require(__DIR__ . "/controller/controller.php");
+require($_SERVER['DOCUMENT_ROOT'] . "/controller/controller.php");
 
 try {
     $action = $_REQUEST['action'] ?? null;
 
     switch ($action) {
         case "userProfile":
-            require(__DIR__ . '/view/userProfile.php');
+            require($_SERVER['DOCUMENT_ROOT'] . '/view/userProfile.php');
             break;
         case "userSignInGoogle":
             $token = $_POST['credential']; //post credentials 
@@ -86,5 +86,5 @@ try {
     }
 } catch (Exception $e) {
     $errorMsg = $e->getMessage();
-    require(__DIR__ . "/view/errorView.php");
+    require($_SERVER['DOCUMENT_ROOT'] . "/view/errorView.php");
 }

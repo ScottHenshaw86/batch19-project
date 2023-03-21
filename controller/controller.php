@@ -1,11 +1,11 @@
 <?php
 
 
-require_once(__DIR__ . "/model/UserManager.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/model/UserManager.php");
 
-require_once __DIR__ . "/model/UserManager.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/model/UserManager.php";
 
-require_once __DIR__ . "/model/model.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/model/model.php";
 
 // function showIndex()
 // {
@@ -16,7 +16,7 @@ require_once __DIR__ . "/model/model.php";
 function showIndex()
 {
     // $chats = loadChats(); // TODO: move this to signed in view
-    require(__DIR__ . "/view/indexView.php");
+    require($_SERVER['DOCUMENT_ROOT'] . "/view/indexView.php");
 }
 
 function checkUserSignInGoogle($decodedToken)
@@ -38,7 +38,7 @@ function checkUserSignInGoogle($decodedToken)
             $_SESSION['id'] = $user->id;
             $_SESSION['first_name'] = $user->first_name;
             $_SESSION['last_name'] = $user->last_name;
-            header('location: ' . __DIR__ . '/index.php?action=userProfile');
+            header('location: ' . $_SERVER['DOCUMENT_ROOT'] . '/index.php?action=userProfile');
             exit;
         } else {
             // if user doesn't exist, prepare an INSERT query // If they are NOT in the DB, insert them [firstname, lastname, email, profile photo];
@@ -52,7 +52,7 @@ function checkUserSignInGoogle($decodedToken)
             }
             echo 'user has been added successfully';
         }
-        header('location: ' . __DIR__ . '/index.php?action=userProfile');
+        header('location: ' . $_SERVER['DOCUMENT_ROOT'] . '/index.php?action=userProfile');
         exit;
     } else {
         $msg = "invalid login";
@@ -61,7 +61,7 @@ function checkUserSignInGoogle($decodedToken)
         echo "iss:" . $issValid;
         echo '<br>';
         echo "exp:" . $expValid;
-        header('location:' . __DIR__ . '/index.php?error=' . urlencode($msg));
+        header('location:' . $_SERVER['DOCUMENT_ROOT'] . '/index.php?error=' . urlencode($msg));
         exit();
     }
 }
@@ -79,10 +79,10 @@ function userSignUp($firstName, $lastName, $email, $pwd, $pwd2)
         //if data good, insert into database w model function
         $userManager = new UserManager();
         $users = $userManager->insertUser($firstName, $lastName, $email, $pwd);
-        require __DIR__ . "/view/signUpView.php";
+        require $_SERVER['DOCUMENT_ROOT'] . "/view/signUpView.php";
     } else {
         $msg = "Please fill in all inputs.";
-        require __DIR__ . "/view/signUpView.php";
+        require $_SERVER['DOCUMENT_ROOT'] . "/view/signUpView.php";
     }
 }
 
@@ -96,23 +96,23 @@ function userSignIn($email, $pwd)
         throw new Exception("Invalid Information");
     } else {
         //if data good, allow sign in
-        header('location:' . __DIR__ . "/index.php"); //TODO: change header location
+        header('location:' . $_SERVER['DOCUMENT_ROOT'] . "/index.php"); //TODO: change header location
     }
 }
 function showUserSignUp()
 {
-    require __DIR__ . "/view/signUpView.php";
+    require $_SERVER['DOCUMENT_ROOT'] . "/view/signUpView.php";
 }
 
 function showUserSignIn()
 {
-    require __DIR__ . "/view/signInView.php";
+    require $_SERVER['DOCUMENT_ROOT'] . "/view/signInView.php";
 }
 
 function showChats()
 {
     $chats = loadChats();
-    require(__DIR__ . "/view/messageView.php");
+    require($_SERVER['DOCUMENT_ROOT'] . "/view/messageView.php");
 }
 
 function showMessages($conversationId)
@@ -120,7 +120,7 @@ function showMessages($conversationId)
     $messages = getMessages($conversationId);
     if ($messages) {
         foreach ($messages as $message) {
-            require __DIR__ . "/view/components/messageCard.php";
+            require $_SERVER['DOCUMENT_ROOT'] . "/view/components/messageCard.php";
         }
     }
     // Set the response headers
@@ -139,7 +139,7 @@ function searchMessages($term)
     $chats = searchMessagesGet($term);
     if (!empty($chats)) {
         foreach ($chats as $chat) {
-            include(__DIR__ . '/view/components/chatCard.php');
+            include($_SERVER['DOCUMENT_ROOT'] . '/view/components/chatCard.php');
         }
     }
 }
