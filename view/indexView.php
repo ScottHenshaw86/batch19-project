@@ -38,7 +38,7 @@ ob_start();
         <img src="/images/logos/coupang.png" />
         <img src="/images/logos/kb.png" />
         <img src="/images/logos/naver.png" />
-        <img src="/images/logos/twitter.png" />
+        <img src="/images/logos/Twitter.png" />
         <img src="/images/logos/facebook.png" />
         <img src="/images/logos/netflix.png" />
         <img src="/images/logos/Telus-Logo.png" />
