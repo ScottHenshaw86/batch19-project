@@ -8,7 +8,7 @@ $httpProtocol =
     !isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on" ? "http" : "https";
 define(
     "BASE",
-    $httpProtocol . "://" . $_SERVER["HTTP_HOST"] . "/sites/JournalingProject"
+    $httpProtocol . "://" . $_SERVER["HTTP_HOST"] . "/sites/batch19-project"
 );
 
 require(ROOT . "/controller/controller.php");
