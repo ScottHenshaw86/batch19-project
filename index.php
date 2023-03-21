@@ -1,14 +1,24 @@
 <?php
-// ROUTER
 
-require($_SERVER['DOCUMENT_ROOT'] . "/controller/controller.php");
+// USE IN PHP
+define("ROOT", dirname(__FILE__));
+
+// USE IN HTML
+$httpProtocol =
+    !isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on" ? "http" : "https";
+define(
+    "BASE",
+    $httpProtocol . "://" . $_SERVER["HTTP_HOST"] . "/sites/JournalingProject"
+);
+
+require(ROOT . "/controller/controller.php");
 
 try {
     $action = $_REQUEST['action'] ?? null;
 
     switch ($action) {
         case "userProfile":
-            require($_SERVER['DOCUMENT_ROOT'] . '/view/userProfile.php');
+            require(ROOT . '/view/userProfile.php');
             break;
         case "userSignInGoogle":
             $token = $_POST['credential']; //post credentials 
@@ -86,5 +96,5 @@ try {
     }
 } catch (Exception $e) {
     $errorMsg = $e->getMessage();
-    require($_SERVER['DOCUMENT_ROOT'] . "/view/errorView.php");
+    require(ROOT . "/view/errorView.php");
 }
