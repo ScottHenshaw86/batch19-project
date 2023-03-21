@@ -1,7 +1,7 @@
 <?php
 // ROUTER
 
-require("/controller/controller.php");
+require("./controller/controller.php");
 
 try {
     $action = $_REQUEST['action'] ?? null;
@@ -86,5 +86,5 @@ try {
     }
 } catch (Exception $e) {
     $errorMsg = $e->getMessage();
-    require("/view/errorView.php");
+    require("./view/errorView.php");
 }

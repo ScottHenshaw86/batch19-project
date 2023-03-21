@@ -1,11 +1,11 @@
 <?php
 
 
-require_once("/model/UserManager.php");
+require_once("./model/UserManager.php");
 
-require_once "/model/UserManager.php";
+require_once "./model/UserManager.php";
 
-require_once "/model/model.php";
+require_once "./model/model.php";
 
 // function showIndex()
 // {
@@ -16,7 +16,7 @@ require_once "/model/model.php";
 function showIndex()
 {
     // $chats = loadChats(); // TODO: move this to signed in view
-    require("/view/indexView.php");
+    require("./view/indexView.php");
 }
 
 function checkUserSignInGoogle($decodedToken)
