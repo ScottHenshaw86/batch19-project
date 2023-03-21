@@ -33,15 +33,15 @@ ob_start();
 <div class="feature-companies">
     <h3>get hired by the top companies in tech</h3>
     <div class="logos">
-        <img src="/public/images/logos/facebook.png" />
-        <img src="/public/images/logos/netflix.png" />
-        <img src="/public/images/logos/coupang.png" />
-        <img src="/public/images/logos/kb.png" />
-        <img src="/public/images/logos/naver.png" />
-        <img src="/public/images/logos/twitter.png" />
-        <img src="/public/images/logos/facebook.png" />
-        <img src="/public/images/logos/netflix.png" />
-        <img src="/public/images/logos/Telus-Logo.png" />
+        <img src="/images/logos/facebook.png" />
+        <img src="/images/logos/netflix.png" />
+        <img src="/images/logos/coupang.png" />
+        <img src="/images/logos/kb.png" />
+        <img src="/images/logos/naver.png" />
+        <img src="/images/logos/twitter.png" />
+        <img src="/images/logos/facebook.png" />
+        <img src="/images/logos/netflix.png" />
+        <img src="/images/logos/Telus-Logo.png" />
     </div>
 </div>
 <div class="feature-new-job">
