@@ -9,11 +9,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $remote_ip = $_SERVER['REMOTE_ADDR'];
 
     // Check if the IP address is the localhost
-    if ($remote_ip !== '127.0.0.1' && $remote_ip !== '::1') {
-        // If the IP address is not the localhost, return an error message
-        http_response_code(403);
-        die('Access denied');
-    }
+    // if ($remote_ip !== '127.0.0.1' && $remote_ip !== '::1') {
+    //     // If the IP address is not the localhost, return an error message
+    //     http_response_code(403);
+    //     die('Access denied');
+    // }
 
     $data = json_decode(
         file_get_contents('php://input'),
