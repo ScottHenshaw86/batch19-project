@@ -15,7 +15,7 @@ ob_start();
 
             if (!empty($chats)) {
                 foreach ($chats as $chat) {
-                    include('./view/components/chatCard.php');
+                    include('/view/components/chatCard.php');
                 }
             }
             ?>
@@ -24,17 +24,17 @@ ob_start();
     <div class="messengerCenter">
         <?php
         if (!empty($conversationId) and !empty($senderId) and !empty($message)) {
-            include "./view/components/messageCard.php";
+            include "/view/components/messageCard.php";
         }
         ?>
     </div>
     <div class="messengerRight"></div>
 </div>
 
-<script src="./public/javascript/chatFunc.js"></script>
-<script src="./public/javascript/messenger.js"></script>
-<script src="./public/javascript/messageSearch.js"></script>
+<script src="/public/javascript/chatFunc.js"></script>
+<script src="/public/javascript/messenger.js"></script>
+<script src="/public/javascript/messageSearch.js"></script>
 <?php
 $content = ob_get_clean();
-require('./view/template.php');
+require('/view/template.php');
 ?>

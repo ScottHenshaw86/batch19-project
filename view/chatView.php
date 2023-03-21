@@ -2,7 +2,7 @@
 
     <div class="chatboxContainer">
         <div class="chatboxHead">
-            <div class="messagingProfileIco"><img src="./TestProfileImg/dustyProfile.png" alt=""></div>
+            <div class="messagingProfileIco"><img src="/TestProfileImg/dustyProfile.png" alt=""></div>
             <span class="chatboxTitle">Messages</span>
             <div class="chatboxActions">
                 <i class="fa-solid fa-ellipsis"></i>
@@ -15,7 +15,7 @@
             <?php
             if (!empty($chats)) {
                 foreach ($chats as $chat) {
-                    include('./view/components/chatCard.php');
+                    include('/view/components/chatCard.php');
                 }
             }
             ?>
@@ -23,5 +23,5 @@
         </div>
     </div>
 </div>
-<script src="./public/javascript/chatFunc.js"></script>
-<script src="./public/javascript/chatbox.js"></script>
+<script src="/public/javascript/chatFunc.js"></script>
+<script src="/public/javascript/chatbox.js"></script>

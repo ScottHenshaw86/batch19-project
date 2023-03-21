@@ -5,7 +5,7 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
 if ($audValid && $issValid && $expValid) { // if thes are valid
     session_start();
-    // header("Location: ./view/indexView.php");
+    // header("Location: /view/indexView.php");
     $userEmail = $decodedToken->email; // $userEmail is the email taken from the credential & 
     $sqlEmail = $db->prepare('SELECT id, email, first_name, last_name FROM users WHERE email = ?'); // query prepare the DB to see if the user exists - asking data from the users table 
     $sqlEmail->execute([$userEmail]); // ^ asking for the id, email... info ^

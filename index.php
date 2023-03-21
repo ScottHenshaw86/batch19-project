@@ -1,21 +1,21 @@
 <?php
 // ROUTER
 
-require("./controller/controller.php");
+require("/controller/controller.php");
 
 try {
     $action = $_REQUEST['action'] ?? null;
 
     switch ($action) {
         case "userProfile":
-            require('./view/userProfile.php');
+            require('/view/userProfile.php');
             break;
         case "userSignInGoogle":
             $token = $_POST['credential']; //post credentials 
             $decodedToken = json_decode(base64_decode(str_replace('_', '/', str_replace('-', '+', explode('.', $token)[1])))); // decoding the json web token (JWT) into the array info
 
             checkUserSignInGoogle($decodedToken);
-            // require('./view/testView.php');
+            // require('/view/testView.php');
             break;
         case "userSignUpView":
             //call a contrl
@@ -50,34 +50,34 @@ try {
             }
             break;
 
-            case "getChatMessages":
-                $conversationId = $_POST['conversationId'] ?? null;
-                if (!empty($conversationId)) {
-                    showMessages($conversationId);
-                }
-                break;
-            case "submitMessage":
-    
-                $conversationId = $_POST['conversationId'] ?? null;
-                $senderId = $_POST['senderId'];
-                $message = $_POST['message'];
-                // echo $message, $senderId, $conversationId;
-                if (!empty($senderId)  and !empty($message)) {
-                    // echo "<br>";
-                    // echo "getting controller";
-                    addMessage($conversationId, $senderId, $message);
-                }
-                break;
-            case "messenger":
-                showChats();
-    
-                break;
-            case "search":
-                // print_r($_GET);
-                $term = $_GET['term'] ?? null;
-    
-                searchMessages($term);
-                break;
+        case "getChatMessages":
+            $conversationId = $_POST['conversationId'] ?? null;
+            if (!empty($conversationId)) {
+                showMessages($conversationId);
+            }
+            break;
+        case "submitMessage":
+
+            $conversationId = $_POST['conversationId'] ?? null;
+            $senderId = $_POST['senderId'];
+            $message = $_POST['message'];
+            // echo $message, $senderId, $conversationId;
+            if (!empty($senderId)  and !empty($message)) {
+                // echo "<br>";
+                // echo "getting controller";
+                addMessage($conversationId, $senderId, $message);
+            }
+            break;
+        case "messenger":
+            showChats();
+
+            break;
+        case "search":
+            // print_r($_GET);
+            $term = $_GET['term'] ?? null;
+
+            searchMessages($term);
+            break;
 
 
         default:
@@ -86,5 +86,5 @@ try {
     }
 } catch (Exception $e) {
     $errorMsg = $e->getMessage();
-    require("./view/errorView.php");
+    require("/view/errorView.php");
 }

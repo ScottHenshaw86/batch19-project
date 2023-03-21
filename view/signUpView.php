@@ -15,7 +15,7 @@ ob_start();
 <h3>Let's get started</h3>
 <div class="template">
   <div class="box">
-    <img src="./public/images/Saly-25.png" width="300px" />
+    <img src="/public/images/Saly-25.png" width="300px" />
     <h4>I am a</h4>
     <button id="boxbiz" onclick="location.href='bizSignup.html'">
       BUSINESS<br>LOOKING TO HIRE
@@ -26,7 +26,7 @@ ob_start();
     <br><br>
     <p><?= isset($_GET['error']) ? $_GET['error'] : "" ?></p>
     <h4>Don't want to create an account?<br>Register with Google</h4>
-    <?php include("./view/components/googleSignIn.php"); ?>
+    <?php include("/view/components/googleSignIn.php"); ?>
     <br><br>
     <h3>CREATE AN ACCOUNT</h3>
     <form action="index.php?action=userSignUp" method="POST">
@@ -91,16 +91,16 @@ ob_start();
     <div class="one">
       <h4>Waygookin</h4>
       <p>
-        <img src="./public/images/footer/placeholder.png" width="15px" />
+        <img src="/public/images/footer/placeholder.png" width="15px" />
         1101-ho | IS Biz Tower 2, Room 1101, 23, Seonyu-ro 49-gil,
         Yeongdeungpo-gu, Seoul, South Korea<br />
       </p>
       <p>
-        <img src="./public/images/footer/telephone.png" width="15px" />
+        <img src="/public/images/footer/telephone.png" width="15px" />
         02-501-6064
       </p>
       <p>
-        <img src="./public/images/footer/contract.png" width="15px" />
+        <img src="/public/images/footer/contract.png" width="15px" />
         <a href="mailto:waygookin@wcoding.com">waygookin@wcoding.com</a>
       </p>
     </div>
@@ -118,10 +118,10 @@ ob_start();
     </div>
     <div class="three">
       <h4>Follow Us</h4>
-      <a href="#"><img src="./public/images/footer/facebook.png" width="35" /></a>&nbsp;&nbsp;
-      <a href="#"><img src="./public/images/footer/instagram.png" width="35" /></a>&nbsp;&nbsp;
-      <a href="#"><img src="./public/images/footer/linkedin.png" width="35" /></a>&nbsp;&nbsp;
-      <a href="#"><img src="./public/images/footer/twitter.png" width="35" /></a>
+      <a href="#"><img src="/public/images/footer/facebook.png" width="35" /></a>&nbsp;&nbsp;
+      <a href="#"><img src="/public/images/footer/instagram.png" width="35" /></a>&nbsp;&nbsp;
+      <a href="#"><img src="/public/images/footer/linkedin.png" width="35" /></a>&nbsp;&nbsp;
+      <a href="#"><img src="/public/images/footer/twitter.png" width="35" /></a>
       <h4>Sign up to our newsletter</h4>
       <input placeholder="your email" />&nbsp;&nbsp;<button class="button">GO</button>
     </div>
@@ -131,5 +131,5 @@ ob_start();
 
 <?php
 $content = ob_get_clean();
-require('./view/signUpSignInTemplate.php');
+require('/view/signUpSignInTemplate.php');
 ?>

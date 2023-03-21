@@ -1,22 +1,22 @@
 <?php
 
 
-require_once ("./model/UserManager.php");
+require_once("/model/UserManager.php");
 
-require_once "./model/UserManager.php";
+require_once "/model/UserManager.php";
 
-require_once "./model/model.php";
+require_once "/model/model.php";
 
 // function showIndex()
 // {
-//     require("./view/indexView.php");
+//     require("/view/indexView.php");
 // }
 
 
 function showIndex()
 {
     $chats = loadChats(); // TODO: move this to signed in view
-    require("./view/indexView.php");
+    require("/view/indexView.php");
 }
 
 function checkUserSignInGoogle($decodedToken)
@@ -79,10 +79,10 @@ function userSignUp($firstName, $lastName, $email, $pwd, $pwd2)
         //if data good, insert into database w model function
         $userManager = new UserManager();
         $users = $userManager->insertUser($firstName, $lastName, $email, $pwd);
-        require "./view/signUpView.php";
+        require "/view/signUpView.php";
     } else {
         $msg = "Please fill in all inputs.";
-        require "./view/signUpView.php";
+        require "/view/signUpView.php";
     }
 }
 
@@ -101,18 +101,18 @@ function userSignIn($email, $pwd)
 }
 function showUserSignUp()
 {
-    require "./view/signUpView.php";
+    require "/view/signUpView.php";
 }
 
 function showUserSignIn()
 {
-    require "./view/signInView.php";
+    require "/view/signInView.php";
 }
 
 function showChats()
 {
     $chats = loadChats();
-    require("./view/messageView.php");
+    require("/view/messageView.php");
 }
 
 function showMessages($conversationId)
@@ -139,7 +139,7 @@ function searchMessages($term)
     $chats = searchMessagesGet($term);
     if (!empty($chats)) {
         foreach ($chats as $chat) {
-            include('./view/components/chatCard.php');
+            include('/view/components/chatCard.php');
         }
     }
 }
