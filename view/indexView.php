@@ -10,9 +10,9 @@ ob_start();
         <p>waygukwin</p>
     </div>
     <div class="menu">
-        <button id="signup" onclick="location.href='index.php?action=userSignInView'">SIGN UP
+        <button id="signup" onclick="location.href='<?= ROOT; ?>/index.php?action=userSignInView'">SIGN UP
         </button>
-        <button onclick="location.href='index.php?action=userSignInView'">SIGN IN</button>
+        <button onclick="location.href='<?= ROOT; ?>/index.php?action=userSignInView'">SIGN IN</button>
     </div>
 </div>
 <div class="main">
@@ -33,15 +33,15 @@ ob_start();
 <div class="feature-companies">
     <h3>get hired by the top companies in tech</h3>
     <div class="logos">
-        <img src="/public/images/logos/facebook.png" />
-        <img src="/public/images/logos/netflix.png" />
-        <img src="/public/images/logos/coupang.png" />
-        <img src="/public/images/logos/kb.png" />
-        <img src="/public/images/logos/naver.png" />
-        <img src="/public/images/logos/twitter.png" />
-        <img src="/public/images/logos/facebook.png" />
-        <img src="/public/images/logos/netflix.png" />
-        <img src="/public/images/logos/Telus-Logo.png" />
+        <img src="<?= ROOT; ?>/public/images/logos/facebook.png" />
+        <img src="<?= ROOT; ?>/public/images/logos/netflix.png" />
+        <img src="<?= ROOT; ?>/public/images/logos/coupang.png" />
+        <img src="<?= ROOT; ?>/public/images/logos/kb.png" />
+        <img src="<?= ROOT; ?>/public/images/logos/naver.png" />
+        <img src="<?= ROOT; ?>/public/images/logos/twitter.png" />
+        <img src="<?= ROOT; ?>/public/images/logos/facebook.png" />
+        <img src="<?= ROOT; ?>/public/images/logos/netflix.png" />
+        <img src="<?= ROOT; ?>/public/images/logos/Telus-Logo.png" />
     </div>
 </div>
 <div class="feature-new-job">
@@ -51,7 +51,7 @@ ob_start();
             <tbody>
                 <tr>
                     <td>
-                        <img src="/public/images/logo_3186236735.png_crop_23-03-13" width="50" />
+                        <img src="<?= ROOT; ?>/public/images/logo_3186236735.png_crop_23-03-13" width="50" />
                     </td>
                     <td class="job_name">
                         <strong>Intern, Digital Solutions</strong><br />Visa Korea |
@@ -62,7 +62,7 @@ ob_start();
                 </tr>
                 <tr>
                     <td>
-                        <img src="/public/images/kcggi_f908abbc5a.PNG_crop_23-03-08" width="50" />
+                        <img src="<?= ROOT; ?>/public/images/kcggi_f908abbc5a.PNG_crop_23-03-08" width="50" />
                     </td>
                     <td class="job_name">
                         <strong>German Project Intern for Energy Projects in Trade Services
@@ -74,7 +74,7 @@ ob_start();
                 </tr>
                 <tr>
                     <td>
-                        <img src="/public/images/logo_3186236735.png_crop_23-03-13" width="50" />
+                        <img src="<?= ROOT; ?>/public/images/logo_3186236735.png_crop_23-03-13" width="50" />
                     </td>
                     <td class="job_name">
                         <strong>Intern, Digital Solutions</strong><br />Visa Korea |
@@ -100,7 +100,7 @@ ob_start();
                 entrepreneur who's willing to go to the next level.
                 <div class="arrow"></div>
             </blockquote>
-            <img src="/public/images/users/first.jpg" alt="sample1" />
+            <img src="<?= ROOT; ?>/public/images/users/first.jpg" alt="sample1" />
             <div class="author">
                 <h5>Tom Green <span>- CEO of Doordash</span></h5>
             </div>
@@ -111,7 +111,7 @@ ob_start();
                 me for an interview. Waygookin is awesome!
                 <div class="arrow"></div>
             </blockquote>
-            <img src="/public/images/users/second.jpg" alt="sample2" />
+            <img src="<?= ROOT; ?>/public/images/users/second.jpg" alt="sample2" />
             <div class="author">
                 <h5>Anna Karina<span>- Data Analyst</span></h5>
             </div>
@@ -122,7 +122,7 @@ ob_start();
                 hunting has never been easier.
                 <div class="arrow"></div>
             </blockquote>
-            <img src="/public/images/users/third.jpg" alt="sample3" />
+            <img src="<?= ROOT; ?>/public/images/users/third.jpg" alt="sample3" />
             <div class="author">
                 <h5>John Cho<span>- Programmer</span></h5>
             </div>
@@ -132,7 +132,7 @@ ob_start();
 <div class="middle">
     <div class="middle_box">
         <div class="middle_left">
-            <img src="/public/images/Other 03.png" width="100%" />
+            <img src="<?= ROOT; ?>/public/images/Other 03.png" width="100%" />
         </div>
         <div class="middle_right">
             <br />
@@ -150,16 +150,16 @@ ob_start();
         <div class="one">
             <h4>Waygookin</h4>
             <p>
-                <img src="/public/images/footer/placeholder.png" width="15px" />
+                <img src="<?= ROOT; ?>/public/images/footer/placeholder.png" width="15px" />
                 1101-ho | IS Biz Tower 2, Room 1101, 23, Seonyu-ro 49-gil,
                 Yeongdeungpo-gu, Seoul, South Korea<br />
             </p>
             <p>
-                <img src="/public/images/footer/telephone.png" width="15px" />
+                <img src="<?= ROOT; ?>/public/images/footer/telephone.png" width="15px" />
                 02-501-6064
             </p>
             <p>
-                <img src="/public/images/footer/contract.png" width="15px" />
+                <img src="<?= ROOT; ?>/public/images/footer/contract.png" width="15px" />
                 <a href="mailto:waygookin@wcoding.com">waygookin@wcoding.com</a>
             </p>
         </div>
@@ -177,10 +177,10 @@ ob_start();
         </div>
         <div class="three">
             <h4>Follow Us</h4>
-            <a href="#"><img src="/public/images/footer/facebook.png" width="35" /></a>&nbsp;&nbsp;
-            <a href="#"><img src="/public/images/footer/instagram.png" width="35" /></a>&nbsp;&nbsp;
-            <a href="#"><img src="/public/images/footer/linkedin.png" width="35" /></a>&nbsp;&nbsp;
-            <a href="#"><img src="/public/images/footer/twitter.png" width="35" /></a>
+            <a href="#"><img src="<?= ROOT; ?>/public/images/footer/facebook.png" width="35" /></a>&nbsp;&nbsp;
+            <a href="#"><img src="<?= ROOT; ?>/public/images/footer/instagram.png" width="35" /></a>&nbsp;&nbsp;
+            <a href="#"><img src="<?= ROOT; ?>/public/images/footer/linkedin.png" width="35" /></a>&nbsp;&nbsp;
+            <a href="#"><img src="<?= ROOT; ?>/public/images/footer/twitter.png" width="35" /></a>
             <h4>Sign up to our newsletter</h4>
             <input placeholder="your email" />&nbsp;&nbsp;<button class="button">GO</button>
         </div>
