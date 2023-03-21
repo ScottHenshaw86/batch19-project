@@ -205,5 +205,5 @@ ob_start();
 <?php
 
 $content = ob_get_clean();
-require('/view/template.php');
+require(ROOT . '/view/template.php');
 ?>
