@@ -10,9 +10,9 @@ ob_start();
         <p>waygukwin</p>
     </div>
     <div class="menu">
-        <button id="signup" onclick="location.href='<?= BASE; ?>/index.php?action=userSignInView'">SIGN UP
+        <button id="signup" onclick="location.href='/index.php?action=userSignInView'">SIGN UP
         </button>
-        <button onclick="location.href='<?= BASE; ?>/index.php?action=userSignInView'">SIGN IN</button>
+        <button onclick="location.href='/index.php?action=userSignInView'">SIGN IN</button>
     </div>
 </div>
 <div class="main">
@@ -33,15 +33,15 @@ ob_start();
 <div class="feature-companies">
     <h3>get hired by the top companies in tech</h3>
     <div class="logos">
-        <img src="<?= BASE; ?>/public/images/logos/facebook.png" />
-        <img src="<?= BASE; ?>/public/images/logos/netflix.png" />
-        <img src="<?= BASE; ?>/public/images/logos/coupang.png" />
-        <img src="<?= BASE; ?>/public/images/logos/kb.png" />
-        <img src="<?= BASE; ?>/public/images/logos/naver.png" />
-        <img src="<?= BASE; ?>/public/images/logos/twitter.png" />
-        <img src="<?= BASE; ?>/public/images/logos/facebook.png" />
-        <img src="<?= BASE; ?>/public/images/logos/netflix.png" />
-        <img src="<?= BASE; ?>/public/images/logos/Telus-Logo.png" />
+        <img src="/public/images/logos/facebook.png" />
+        <img src="/public/images/logos/netflix.png" />
+        <img src="/public/images/logos/coupang.png" />
+        <img src="/public/images/logos/kb.png" />
+        <img src="/public/images/logos/naver.png" />
+        <img src="/public/images/logos/twitter.png" />
+        <img src="/public/images/logos/facebook.png" />
+        <img src="/public/images/logos/netflix.png" />
+        <img src="/public/images/logos/Telus-Logo.png" />
     </div>
 </div>
 <div class="feature-new-job">
