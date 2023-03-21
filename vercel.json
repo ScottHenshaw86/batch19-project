@@ -7,6 +7,10 @@
 		{
 			"src": "/(.*)",
 			"dest": "/api/index.php"
+		},
+		{
+			"src": "/(css|js|vendor|assets|build)/(.*)",
+			"dest": "public/$1/$2"
 		}
 	],
 	"env": {
