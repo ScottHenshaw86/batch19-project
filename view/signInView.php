@@ -8,8 +8,8 @@ ob_start();
     <p>waygukwin</p>
   </div>
   <div class="menu">
-    <button id="home" onclick="location.href='index.php'">HOME</button>
-    <button onclick="location.href='index.php?action=userSignUpView'">SIGN UP</button>
+    <button id="home" onclick="location.href='/index.php'">HOME</button>
+    <button onclick="location.href='/index.php?action=userSignUpView'">SIGN UP</button>
   </div>
 </div>
 
@@ -81,5 +81,5 @@ ob_start();
 </div>
 <?php
 $content = ob_get_clean();
-require('/view/signUpSignInTemplate.php');
+require(ROOT . '/view/signUpSignInTemplate.php');
 ?>
