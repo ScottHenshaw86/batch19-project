@@ -1,7 +1,7 @@
 <?php
 // ROUTER
 
-// require("/controller/controller.php");
+require("/controller/controller.php");
 
 try {
     $action = $_REQUEST['action'] ?? null;
@@ -81,8 +81,7 @@ try {
 
 
         default:
-            // showIndex();
-            echo "<h1>Hello Batch 19!</h1>";
+            showIndex();
             break;
     }
 } catch (Exception $e) {
