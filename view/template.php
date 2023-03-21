@@ -10,8 +10,8 @@ $_SESSION["userId"] = 1; ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/9d1def913c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="<?= BASE; ?>/public/css/styleMain.css" />
-    <link rel="stylesheet" href="<?= BASE; ?>/public/css/messenger.css">
+    <link rel="stylesheet" type="text/css" href="<?= BASE; ?>/public/css/styleMain.css" />
+    <link rel="stylesheet" type="text/css" href="<?= BASE; ?>/public/css/messenger.css">
     <script>
         const userId = <?= $_SESSION["userId"] ?>
     </script>
