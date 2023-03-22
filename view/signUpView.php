@@ -26,7 +26,7 @@ ob_start();
     <br><br>
     <p><?= isset($_GET['error']) ? $_GET['error'] : "" ?></p>
     <h4>Don't want to create an account?<br>Register with Google</h4>
-    <?php include("/view/components/googleSignIn.php"); ?>
+    <?php include(ROOT . "/view/components/googleSignIn.php"); ?>
     <br><br>
     <h3>CREATE AN ACCOUNT</h3>
     <form action="index.php?action=userSignUp" method="POST">

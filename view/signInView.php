@@ -27,11 +27,11 @@ ob_start();
       <button id="submit" type="submit" value="Sign In" class="button">SIGN IN</button>
       <button id="reset" type="reset" value="Reset" class="button">RESET</button>
       <br /><br />
-      <?php include("/view/components/googleSignIn.php"); ?>
+      <?php includeROOT . "/view/components/googleSignIn.php"); ?>
 
     </form>
     <h4>Don't have an account?</h4>
-    <button onclick="location.href='index.php?action=userSignUpView'" class="button">
+    <button onclick="location.href='/index.php?action=userSignUpView'" class="button">
       Sign up here
     </button>
   </div>
