@@ -6,7 +6,7 @@ define("ROOT", dirname(__FILE__));
 function isSecure()
 {
     return (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
-        || $_SERVER['SERVER_PORT'] == 443;
+        || $_SERVER['HTTP_HOST'] == "batch19-project.vercel.app";
 }
 
 // USE IN HTML
