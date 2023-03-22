@@ -2,8 +2,14 @@
 //TODO: Check all functions for safety
 function dbConnect()
 {
+    $HOST = process.env.PLANETSCALE_DB_HOST ?? "localhost";
+    $DB = process.env.PLANETSCALE_DB ?? "batch19_project";
+    $USER = process.env.PLANETSCALE_DB_USERNAME ?? "root";
+    $PWD = process.env.PLANETSCALE_DB_PASSWORD ?? "";
+    $SSL_CERT = process.env.PLANETSCALE_SSL_CERT_PATH ?? "";
+
     try {
-        return new PDO('mysql:host=localhost;dbname=batch19_project;charset=utf8', 'root', '');
+        return new PDO("mysql:host=$HOST;dbname=$DB;charset=utf8", $USER, $PWD, );
     } catch (Exception $e) {
         die('Error : ' . $e->getMessage());
     }
