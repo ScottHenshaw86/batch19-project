@@ -7,12 +7,13 @@ ob_start();
 
 <div class="header">
     <div class="logo">
-        <p>waygukwin</p>
+        <a href="./index.php">
+            <p>waygukwin</p>
+        </a>
     </div>
     <div class="menu">
         <!-- <button id="signup" onclick="location.href='/index.php?action=userSignUpView'">SIGN UP -->
-        <a id="signup" href='./index.php?action=userSignUpView'>SIGN UP
-        </a>
+        <a id="signup" href='./index.php?action=userSignUpView'>SIGN UP</a>
         <!-- <button onclick="location.href='/index.php?action=userSignInView'">SIGN IN</button> -->
         <a href='./index.php?action=userSignInView'>SIGN IN</a>
     </div>

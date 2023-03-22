@@ -5,17 +5,18 @@ ob_start();
 
 <div class="header">
   <div class="logo">
-    <p>waygukwin</p>
+    <a href="./index.php">
+      <p>waygukwin</p>
+    </a>
   </div>
   <div class="menu">
-    <button id="home" onclick="location.href='index.php'">HOME</button>
-    <button onclick="location.href='index.php?action=userSignInView'">SIGN IN</button>
+    <a id="signin" href='./index.php?action=userSignInView'>SIGN IN</a>
   </div>
 </div>
 <h3>Let's get started</h3>
 <div class="template">
   <div class="box">
-    <img src="/images/Saly-25.png" width="300px" />
+    <img src="<?= BASE; ?>/images/Saly-25.png" width="300px" />
     <h4>I am a</h4>
     <button id="boxbiz" onclick="location.href='bizSignup.html'">
       BUSINESS<br>LOOKING TO HIRE
@@ -91,16 +92,16 @@ ob_start();
     <div class="one">
       <h4>Waygookin</h4>
       <p>
-        <img src="/images/footer/placeholder.png" width="15px" />
+        <img src="<?= BASE; ?>/images/footer/placeholder.png" width="15px" />
         1101-ho | IS Biz Tower 2, Room 1101, 23, Seonyu-ro 49-gil,
         Yeongdeungpo-gu, Seoul, South Korea<br />
       </p>
       <p>
-        <img src="/images/footer/telephone.png" width="15px" />
+        <img src="<?= BASE; ?>/images/footer/telephone.png" width="15px" />
         02-501-6064
       </p>
       <p>
-        <img src="/images/footer/contract.png" width="15px" />
+        <img src="<?= BASE; ?>/images/footer/contract.png" width="15px" />
         <a href="mailto:waygookin@wcoding.com">waygookin@wcoding.com</a>
       </p>
     </div>
@@ -118,10 +119,10 @@ ob_start();
     </div>
     <div class="three">
       <h4>Follow Us</h4>
-      <a href="#"><img src="/images/footer/facebook.png" width="35" /></a>&nbsp;&nbsp;
-      <a href="#"><img src="/images/footer/instagram.png" width="35" /></a>&nbsp;&nbsp;
-      <a href="#"><img src="/images/footer/linkedin.png" width="35" /></a>&nbsp;&nbsp;
-      <a href="#"><img src="/images/footer/twitter.png" width="35" /></a>
+      <a href="#"><img src="<?= BASE; ?>/images/footer/facebook.png" width="35" /></a>&nbsp;&nbsp;
+      <a href="#"><img src="<?= BASE; ?>/images/footer/instagram.png" width="35" /></a>&nbsp;&nbsp;
+      <a href="#"><img src="<?= BASE; ?>/images/footer/linkedin.png" width="35" /></a>&nbsp;&nbsp;
+      <a href="#"><img src="<?= BASE; ?>/images/footer/twitter.png" width="35" /></a>
       <h4>Sign up to our newsletter</h4>
       <input placeholder="your email" />&nbsp;&nbsp;<button class="button">GO</button>
     </div>
