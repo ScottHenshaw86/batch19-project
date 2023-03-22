@@ -1,5 +1,5 @@
 <?php
-$title = "TODO:change";
+$title = "WaygukIn";
 ob_start();
 
 // include "/view/chatView.php"; // TODO: move this to logged in view

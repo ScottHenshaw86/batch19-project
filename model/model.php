@@ -2,14 +2,17 @@
 //TODO: Check all functions for safety
 function dbConnect()
 {
-    $HOST = process.env.PLANETSCALE_DB_HOST ?? "localhost";
-    $DB = process.env.PLANETSCALE_DB ?? "batch19_project";
-    $USER = process.env.PLANETSCALE_DB_USERNAME ?? "root";
-    $PWD = process.env.PLANETSCALE_DB_PASSWORD ?? "";
-    $SSL_CERT = process.env.PLANETSCALE_SSL_CERT_PATH ?? "";
+    $HOST = getenv("PLANETSCALE_DB_HOST") ?? "localhost";
+    $DATABASE = getenv("PLANETSCALE_DB") ?? "batch19_project";
+    $USERNAME = getenv("PLANETSCALE_DB_USERNAME") ?? "root";
+    $PASSWORD = getenv("PLANETSCALE_DB_PASSWORD") ?? "";
+    $SSL_CERT = getenv("PLANETSCALE_SSL_CERT_PATH") ?? "";
+    $OPTIONS = array(
+        PDO::MYSQL_ATTR_SSL_CA => $SSL_CERT
+    );
 
     try {
-        return new PDO("mysql:host=$HOST;dbname=$DB;charset=utf8", $USER, $PWD, );
+        return new PDO("mysql:host=$HOST;dbname=$DATABASE;charset=utf8", $USERNAME, $PASSWORD, $OPTIONS);
     } catch (Exception $e) {
         die('Error : ' . $e->getMessage());
     }

@@ -1,5 +1,5 @@
 <?php
-$title = "Sign In";
+$title = "WaygukIn: Sign In";
 ob_start();
 ?>
 
