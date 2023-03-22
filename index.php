@@ -3,12 +3,16 @@
 // USE IN PHP
 define("ROOT", dirname(__FILE__));
 
+function isSecure()
+{
+    return (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+        || $_SERVER['SERVER_PORT'] == 443;
+}
+
 // USE IN HTML
-echo $_SERVER["HTTPS"];
+echo isSecure() ? "TRUE_SECURE" : "FALSE_INSECURE";
 echo "<br>";
-$httpProtocol =
-    !isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on" ? "http" : "https";
-if ($httpProtocol === "https") {
+if (isSecure()) {
     define(
         "BASE",
         "https" . "://" . $_SERVER["HTTP_HOST"]
