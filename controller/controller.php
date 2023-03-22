@@ -15,7 +15,7 @@
 
 function showIndex()
 {
-    $chats = loadChats(); // TODO: move this to signed in view
+    // $chats = loadChats(); // TODO: move this to signed in view
     require(ROOT . "/view/indexView.php");
 }
 

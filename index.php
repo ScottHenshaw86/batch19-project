@@ -6,16 +6,18 @@ define("ROOT", dirname(__FILE__));
 // USE IN HTML
 $httpProtocol =
     !isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on" ? "http" : "https";
-if ($httpProtocol) {
+if ($httpProtocol === "https") {
     define(
         "BASE",
         "https" . "://" . $_SERVER["HTTP_HOST"]
     );
+    define("SOURCE", "");
 } else {
     define(
         "BASE",
-        $httpProtocol . "://" . $_SERVER["HTTP_HOST"] . "/sites/batch19-project"
+        "http" . "://" . $_SERVER["HTTP_HOST"] . "/sites/batch19-project"
     );
+    define("SOURCE", "./public");
 }
 
 require(ROOT . "/controller/controller.php");
