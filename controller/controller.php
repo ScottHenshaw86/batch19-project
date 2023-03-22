@@ -1,11 +1,11 @@
 <?php
 
 
-require_once(ROOT . "/model/UserManager.php");
+// require_once(ROOT . "/model/UserManager.php");
 
-require_once ROOT . "/model/UserManager.php";
+// require_once ROOT . "/model/UserManager.php";
 
-require_once ROOT . "/model/model.php";
+// require_once ROOT . "/model/model.php";
 
 // function showIndex()
 // {
