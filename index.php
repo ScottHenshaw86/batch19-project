@@ -4,6 +4,8 @@
 define("ROOT", dirname(__FILE__));
 
 // USE IN HTML
+echo $_SERVER["HTTPS"];
+echo "<br>";
 $httpProtocol =
     !isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on" ? "http" : "https";
 if ($httpProtocol === "https") {
