@@ -10,7 +10,9 @@ function isSecure()
 }
 
 // USE IN HTML
-echo isSecure() ? "TRUE_SECURE" : "FALSE_INSECURE";
+echo "<pre>";
+print_r($_SERVER);
+// echo isSecure() ? "TRUE_SECURE" : "FALSE_INSECURE";
 echo "<br>";
 if (isSecure()) {
     define(
