@@ -4,6 +4,7 @@ class Manager
 {
     protected function dbConnect()
     {
+
         $HOST = getenv("PLANETSCALE_DB_HOST") ?? "localhost";
         $DATABASE = getenv("PLANETSCALE_DB") ?? "batch19_project";
         $USERNAME = getenv("PLANETSCALE_DB_USERNAME") ?? "root";

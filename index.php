@@ -11,13 +11,11 @@ if ($httpProtocol === "https") {
         "BASE",
         "https" . "://" . $_SERVER["HTTP_HOST"]
     );
-    define("SOURCE", "");
 } else {
     define(
         "BASE",
-        "http" . "://" . $_SERVER["HTTP_HOST"] . "/sites/batch19-project"
+        "http" . "://" . $_SERVER["HTTP_HOST"] . "/sites/batch19-project/public"
     );
-    define("SOURCE", "./public");
 }
 
 require(ROOT . "/controller/controller.php");
