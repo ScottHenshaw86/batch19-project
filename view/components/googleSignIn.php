@@ -6,7 +6,7 @@
 <body>
     <!-- <h4>Google Authentication Login Page</h4> -->
     <?= getenv("GOOGLE_CLIENT_ID"); ?>
-    <div id="g_id_onload" data-client_id="<?= getenv("GOOGLE_CLIENT_ID"); ?>" data-context="signin" data-ux_mode="popup" data-login_uri="<?= ROOT; ?>/index.php?action=userSignInGoogle" data-auto_prompt="false"></div>
+    <div id="g_id_onload" data-client_id="<?= getenv("GOOGLE_CLIENT_ID"); ?>" data-context="signin" data-ux_mode="popup" data-login_uri="<?= REDIR ?>/index.php?action=userSignInGoogle" data-auto_prompt="false"></div>
 
     <div class="g_id_signin" data-type="standard" data-shape="pill" data-theme="filled_blue" data-text="signin_with" data-size="large" data-locale="en" data-logo_alignment="left"></div>
 </body>

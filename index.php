@@ -14,14 +14,22 @@ if (isSecure()) {
         "BASE",
         "https" . "://" . $_SERVER["HTTP_HOST"]
     );
+    define(
+        "REDIR",
+        "https://batch19-project.vercel.app/"
+    );
 } else {
     define(
         "BASE",
         "http" . "://" . $_SERVER["HTTP_HOST"] . "/sites/batch19-project/public"
     );
+    define(
+        "REDIR",
+        "sites/batch19-project"
+    );
 }
 
-require(ROOT . "/controller/controller.php");
+require_once ROOT . "/controller/controller.php";
 
 try {
     $action = $_REQUEST['action'] ?? null;

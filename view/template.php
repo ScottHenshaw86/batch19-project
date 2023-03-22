@@ -1,5 +1,3 @@
-<?php session_start();
-$_SESSION["userId"] = 1; ?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -1,11 +1,11 @@
 <?php
 
 
-// require_once(ROOT . "/model/UserManager.php");
+require_once ROOT . "/model/UserManager.php";
 
-// require_once ROOT . "/model/UserManager.php";
+require_once ROOT . "/model/UserManager.php";
 
-// require_once ROOT . "/model/model.php";
+require_once ROOT . "/model/model.php";
 
 // function showIndex()
 // {
@@ -22,7 +22,7 @@ function showIndex()
 function checkUserSignInGoogle($decodedToken)
 {
     // print_r($decodedToken); //verifying Google ID tokens using terneries
-    $audValid = $decodedToken->aud === getenv("GOOGLE_AUD") ? true : false;
+    $audValid = $decodedToken->aud === getenv("GOOGLE_CLIENT_ID") ? true : false;
     $issValid = $decodedToken->iss === "https://accounts.google.com" ? true : false;
     $expValid = $decodedToken->exp > time() ? true : false;
     if ($audValid && $issValid && $expValid) { // if they are valid
@@ -38,7 +38,7 @@ function checkUserSignInGoogle($decodedToken)
             $_SESSION['id'] = $user->id;
             $_SESSION['first_name'] = $user->first_name;
             $_SESSION['last_name'] = $user->last_name;
-            header('location: ' . ROOT . '/index.php?action=userProfile');
+            header('location: ./index.php?action=userProfile');
             exit;
         } else {
             // if user doesn't exist, prepare an INSERT query // If they are NOT in the DB, insert them [firstname, lastname, email, profile photo];
@@ -52,7 +52,7 @@ function checkUserSignInGoogle($decodedToken)
             }
             echo 'user has been added successfully';
         }
-        header('location: ' . ROOT . '/index.php?action=userProfile');
+        header('location: ./index.php?action=userProfile');
         exit;
     } else {
         $msg = "invalid login";
@@ -61,7 +61,7 @@ function checkUserSignInGoogle($decodedToken)
         echo "iss:" . $issValid;
         echo '<br>';
         echo "exp:" . $expValid;
-        header('location:' . ROOT . '/index.php?error=' . urlencode($msg));
+        header('location: ./index.php?error=' . urlencode($msg));
         exit();
     }
 }
@@ -96,7 +96,7 @@ function userSignIn($email, $pwd)
         throw new Exception("Invalid Information");
     } else {
         //if data good, allow sign in
-        header('location:' . ROOT . "/index.php"); //TODO: change header location
+        header('location: ./index.php'); //TODO: change header location
     }
 }
 function showUserSignUp()
