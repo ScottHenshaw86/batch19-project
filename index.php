@@ -9,11 +9,6 @@ function isSecure()
         || $_SERVER['HTTP_HOST'] == "batch19-project.vercel.app";
 }
 
-// USE IN HTML
-echo "<pre>";
-print_r($_SERVER);
-// echo isSecure() ? "TRUE_SECURE" : "FALSE_INSECURE";
-echo "<br>";
 if (isSecure()) {
     define(
         "BASE",
