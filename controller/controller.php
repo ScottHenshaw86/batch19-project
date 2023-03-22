@@ -22,7 +22,7 @@ function showIndex()
 function checkUserSignInGoogle($decodedToken)
 {
     // print_r($decodedToken); //verifying Google ID tokens using terneries
-    $audValid = $decodedToken->aud === "51328436247-5obpti781ob31s4h56bsbatespmjpoe2.apps.googleusercontent.com" ? true : false;
+    $audValid = $decodedToken->aud === getenv("GOOGLE_AUD") ? true : false;
     $issValid = $decodedToken->iss === "https://accounts.google.com" ? true : false;
     $expValid = $decodedToken->exp > time() ? true : false;
     if ($audValid && $issValid && $expValid) { // if they are valid
