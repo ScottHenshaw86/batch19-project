@@ -3,15 +3,6 @@ require_once "Manager.php";
 class UserManager extends Manager
 {
 
-    // TODO: REMOVE THIS!!
-    public function getAllUsers()
-    {
-        $db = $this->dbConnect();
-        $req = $db->query('SELECT * FROM users');
-        $users = $req->fetchAll(PDO::FETCH_OBJ);
-        return $users;
-    }
-
     public function getUserByEmail($userEmail)
     {
         $db = $this->dbConnect();

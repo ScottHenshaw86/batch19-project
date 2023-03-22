@@ -15,14 +15,8 @@ require_once ROOT . "/model/model.php";
 
 function showIndex()
 {
-    // $chats = loadChats(); // TODO: move this to signed in view
-    $userManager = new UserManager();
-
-    $users = $userManager->getAllUsers();
-    echo "<pre>";
-    print_r($users);
-    echo "</pre>";
-    // require(ROOT . "/view/indexView.php");
+    $chats = loadChats(); // TODO: move this to signed in view
+    require(ROOT . "/view/indexView.php");
 }
 
 function checkUserSignInGoogle($decodedToken)
